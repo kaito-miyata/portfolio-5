@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+
+/* ========================================
+    全体設定
+========================================= */
+body {
+	color:#474747;
+	font-size: 14px;
+	line-height: 1.4em;
+	font-family: "メイリオ", "Meiryo", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0 auto;
+	min-width: 800px;
+
+	}
+
+	/* .wrap { */
+		overflow: hidden;
+	}
+
+a {
+	color:#474747;
+	text-decoration:none;
+}
+
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+/* ========================================
+    ヘッダー
+========================================= */
+
+header {
+	width: 100%;
+	height: 86px;
+	/* background-color: red; */
+}
+
+
+.header_container {
+	width: 978px;
+	height: 60px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+}
+.header_container h1 {
+	margin-top: 20px;
+}
+.header_container nav {
+	font-size: 16px;
+}
+.header_container nav ul{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	margin-left: 200px;
+	margin-top: 40px;
+}
+.header_container nav ul li {
+	padding-left: 25px;
+	margin-left: 25px;
+	border-left: 1px dotted #434343 ;
+
+}
+.header_container nav ul li:last-child {
+	padding-right: 25px;
+	margin-right: 25px;
+	border-right: 1px dotted #434343 ;
+
+}
+.hover:hover {
+	opacity: 0.8;
+	color: orange;
+}
+
+/* ========================================
+    メイン画像
+========================================= */
+
+main {
+	width: 100%;
+	height: 392px;
+	background: url(images/mainimage.jpg) no-repeat top center;
+	background-size: cover;
+}
+
+.main_container {
+	width: 978px;
+	margin: 0 auto;
+}
+.catchcopy {
+	width: 394px;
+	height: 273px;
+	/* background-color: tomato; */
+	padding-top: 58px;
+}
+
+.catchcopy h2 {
+	font-size: 30px;
+	/* margin-top: 58px; */
+	line-height: 30px;
+	font-weight: bold;
+	letter-spacing: 8px;
+	display: block;
+	padding-bottom: 20px;
+}
+.catchcopy p {
+	font-size: 14px;
+	display: block;
+	margin: 20px 0;
+}
+.hover:hover {
+	opacity: 0.7;
+
+}
+
+/* ========================================
+    授業内容
+========================================= */
+.lessons {
+	background-color: #ED7C7C;
+	width: 100%;
+	height: auto;
+}
+.lessons_container {
+	width: 978px;
+	margin: 0 auto;
+	/* 追加 */
+	padding: 30px 0;
+}
+.title {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	/* display: inline-block; */
+	padding: 30px;
+}
+
+.title h3 {
+	color: #fff;
+	padding-bottom: 15px;
+	font-size: 24px;
+	border-bottom: 4px solid #fff;
+}
+.title p {
+	color: #fff;
+	margin-left: 30px;
+}
+
+.lessons_detail {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+
+}
+.lessons_teacher {
+	background-color: #fff;
+	width: 632px;
+	height: 222px;
+	padding: 15px;
+}
+.lessons_teacher h4{
+	font-size: 18px;
+	padding: 5px 0;
+}
+.lessons_teacher ul {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+}
+.lessons_course {
+	background-color: #fff;
+	width: 266px;
+	height: 318px;
+	padding: 10px;
+}
+ .lessons_course h4 {
+	font-size: 14px;
+	padding: 5px;
+ }
+
+.lessons_course ul {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	flex-direction: column;
+}
+.lessons_course ul li {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	padding: 5px;
+	border-top: 1px solid #D6D6D6
+}
+.lessons_course ul li a {
+	font-size: 14px;
+	margin-top: 15px;
+	padding: 7px;
+}
+/* ========================================
+    料金体制
+========================================= */
+.price {
+	background-color: #F2F1EF;
+	height: auto;
+}
+
+
+
+
+.price_container {
+	width: 978px;
+	height: auto;
+	margin: 0 auto;
+}
+.price_title{
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	padding: 30px;
+
+}
+.price_title h3 {
+	font-size: 24px;
+	border-bottom: 4px solid #E56D7C;
+
+}
+.price_title p {
+	margin-left: 30px;
+
+}
+.plans {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: space-between;
+}
+.plan {
+	width: 286px;
+	height: 300px;
+	background-color: #fff;
+	padding: 10px;
+	position: relative;
+}
+.plan h4 {
+	font-size: 18px;
+}
+.plan p {
+	font-size: 28px;
+	color: #E56D7C;
+	padding: 10px 0;
+}
+.plan p span {
+	font-size: 16px;
+	color: #E56D7C;
+	/* 追加 */
+	margin-left: 10px;
+
+}
+.plan_list {
+	display: block;
+}
+.plan_list li {
+	border-top:1px dotted gray;
+	padding: 10px;
+	/* display: inline-block; */
+}
+.plan_list li:last-child {
+	border-bottom: 1px dotted gray;
+}
+
+.btn {
+	width: 115px;
+	height: 36px;
+	border-radius: 5px;
+	/* margin: 0 auto; */
+	line-height: 36px;
+	background-color: #E56D7C;
+	display: block;
+	position: absolute;
+	top:250px;
+	left: 20px;
+
+}
+.btn a {
+	margin-left: 30px;
+	color: #fff;
+
+}
+
+/* ========================================
+    フッター
+========================================= */
+footer {
+	background-color: #474747;
+	width: 100%;
+	height: 111px;
+	text-align: center;
+}
+
+footer p {
+	color: #fff;
+	padding-top: 30px;
+
+}
+/* ========================================
+    レスポンシブ
+========================================= */
+@media screen and (max-width:480px){
+
+*{
+	box-sizing: border-box;
+	/* width: 100%; */
+}
+
+
+body {
+	width: 100%;
+	padding: 50px;
+	text-align: center;
+}
+.header_container {
+	width: 100%;
+}
+
+.display_none {
+		display: none;
+	}
+
+.lessons_detail{
+	flex-direction: column;
+}
+.lessons_teacher{
+	height: auto;
+}
+.lessons_teacher ul {
+	flex-direction: column;
+}
+.plans {
+	flex-direction: column;
+	text-align: center;
+
+}
+.plan {
+	margin-bottom: 30px;
+}
+}
+
+
+@media screen and (max-width:959px){
+*{
+	margin: 0 auto;
+}
+
+.lessons_detail {
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: column;
+}
+.lessons_teacher {
+	margin-bottom: 50px;
+}
+}
